@@ -12,3 +12,5 @@ D:\VendingMachine2\VendingKata_Retry\VendingTests\obj\Debug\VendingTests.csproj.
 D:\VendingMachine2\VendingKata_Retry\VendingTests\obj\Debug\VendingTests.csproj.CopyComplete
 D:\VendingMachine2\VendingKata_Retry\VendingTests\obj\Debug\VendingTests.dll
 D:\VendingMachine2\VendingKata_Retry\VendingTests\obj\Debug\VendingTests.pdb
+D:\VendingMachine2\VendingKata_Retry\VendingTests\bin\Debug\VendingMachine.dll
+D:\VendingMachine2\VendingKata_Retry\VendingTests\bin\Debug\VendingMachine.pdb

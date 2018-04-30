@@ -10,7 +10,7 @@ namespace VendingMachine
     {
         public int AcceptCoin()
         {
-            
+            return 1;
         }
     }
 }
