@@ -8,7 +8,7 @@ namespace VendingMachineKata
 {
     public class VendingMachine
     {
-        private int moneyInMachine = 0;
+        public int MoneyInMachine = 0;
 
         public int AcceptCoin(double diameter, double weight)
         {
