@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VendingMachine;
+using VendingMachineKata;
 
 namespace VendingTests
 {
     [TestClass]
     public class VendingTests
     {
-        VendingMachine.VendingMachine thisMachine;
+        VendingMachine thisMachine;
 
         /// <summary>
         /// Test initialization: Creates a clean VendingMachine Object
@@ -15,7 +15,7 @@ namespace VendingTests
         [TestInitialize]
         public void testInit()
         {
-            thisMachine = new VendingMachine.VendingMachine();
+            thisMachine = new VendingMachine();
         }
         [TestMethod]
         public void DeclineCoin_Penny()
