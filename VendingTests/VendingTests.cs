@@ -21,14 +21,14 @@ namespace VendingTests
         public void DeclineCoin_Penny()
         {
             thisMachine.AcceptCoin(Coin.PENNY.Item1, Coin.PENNY.Item2);
-            Assert.AreEqual(0, thisMachine.MoneyInMachine);
+            Assert.AreEqual(0, thisMachine.InsertedAmount);
         }
 
         [TestMethod]
         public void AcceptCoin_Nickel()
         {
             thisMachine.AcceptCoin(Coin.NICKEL.Item1, Coin.NICKEL.Item2);
-            Assert.AreEqual(5, thisMachine.MoneyInMachine);
+            Assert.AreEqual(5, thisMachine.InsertedAmount);
         }
 
         //[TestMethod]
