@@ -3,3 +3,4 @@ D:\VendingMachine2\VendingKata_Retry\VendingMachine\bin\Debug\VendingMachine.pdb
 D:\VendingMachine2\VendingKata_Retry\VendingMachine\obj\Debug\VendingMachineKata.csproj.CoreCompileInputs.cache
 D:\VendingMachine2\VendingKata_Retry\VendingMachine\obj\Debug\VendingMachine.dll
 D:\VendingMachine2\VendingKata_Retry\VendingMachine\obj\Debug\VendingMachine.pdb
+D:\VendingMachine2\VendingKata_Retry\VendingMachine\obj\Debug\VendingMachineKata.csprojResolveAssemblyReference.cache
