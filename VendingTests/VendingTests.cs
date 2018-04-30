@@ -20,7 +20,7 @@ namespace VendingTests
         [TestMethod]
         public void DeclineCoin_Penny()
         {
-            Assert.AreEqual(1, thisMachine.AcceptCoin(Coin.PENNY.Item1, Coin.PENNY.Item2));
+            Assert.AreEqual(0, thisMachine.AcceptCoin(Coin.PENNY.Item1, Coin.PENNY.Item2));
         }
 
         //[TestMethod]
