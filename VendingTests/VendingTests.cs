@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using VendingMachine;
 
 namespace VendingTests
 {
@@ -9,7 +10,7 @@ namespace VendingTests
         [TestMethod]
         public void DeclineCoin_Penny()
         {
-
+            
         }
 
         [TestMethod]
