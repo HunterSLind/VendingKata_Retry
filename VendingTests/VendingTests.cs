@@ -9,6 +9,9 @@ namespace VendingTests
     {
         VendingMachine.VendingMachine thisMachine;
 
+        /// <summary>
+        /// Test initialization: Creates a clean VendingMachine Object
+        /// </summary>
         [TestInitialize]
         public void testInit()
         {
@@ -43,5 +46,25 @@ namespace VendingTests
         {
             Assert.AreEqual(1, thisMachine.AcceptCoin());
         }
+
+
+        [TestMethod]
+        public void SelectProduct_Chips()
+        {
+            
+        }
+
+        [TestMethod]
+        public void SelectProduct_Cola()
+        {
+
+        }
+
+        [TestMethod]
+        public void SelectProduct_Candy()
+        {
+
+        }
+        
     }
 }
