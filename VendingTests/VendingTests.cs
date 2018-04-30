@@ -23,11 +23,11 @@ namespace VendingTests
             Assert.AreEqual(0, thisMachine.AcceptCoin(Coin.PENNY.Item1, Coin.PENNY.Item2));
         }
 
-        //[TestMethod]
-        //public void AcceptCoin_Nickel()
-        //{
-        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
-        //}
+        [TestMethod]
+        public void AcceptCoin_Nickel()
+        {
+            Assert.AreEqual(1, thisMachine.AcceptCoin());
+        }
 
         //[TestMethod]
         //public void AcceptCoin_Dime()
