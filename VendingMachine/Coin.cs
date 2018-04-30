@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendingMachineKata
 {
-    class Coin
+    public class Coin
     {
         /// <summary>
         /// The following Tuple values are the diameter (cm) and weight (g) of known coins, stored respectively.
