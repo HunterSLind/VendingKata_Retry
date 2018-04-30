@@ -65,6 +65,14 @@ namespace VendingTests
         {
             Assert.AreEqual(1, thisMachine.SelectProduct());
         }
+
+        [TestMethod]
+        public void MakeChange()
+        {
+            
+        }
+        
+
         
     }
 }
