@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine", "VendingMachine.csproj", "{F501F915-159F-475E-80E4-8F9D03816B2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachineKata", "VendingMachineKata.csproj", "{F501F915-159F-475E-80E4-8F9D03816B2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingTests", "..\VendingTests\VendingTests.csproj", "{E9C34501-DA7A-4A76-83AD-08CF085377B9}"
 	ProjectSection(ProjectDependencies) = postProject
