@@ -7,8 +7,33 @@ namespace VendingTests
     public class VendingTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DeclineCoin_Penny()
         {
+
+        }
+
+        [TestMethod]
+        public void AcceptCoin_Nickel()
+        {
+
+        }
+
+        [TestMethod]
+        public void AcceptCoin_Dime()
+        {
+
+        }
+
+        [TestMethod]
+        public void AcceptCoin_Quarter()
+        {
+            
+        }
+
+        [TestMethod]
+        public void DeclineCoin_BadCoin()
+        {
+
         }
     }
 }
