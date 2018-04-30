@@ -10,12 +10,12 @@ namespace VendingMachineKata
     {
         public int AcceptCoin()
         {
-            return 1;
+            return 0;
         }
 
         public int SelectProduct()
         {
-            return 1;
+            return 0;
         }
     }
 }
