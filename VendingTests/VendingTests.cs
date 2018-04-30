@@ -26,7 +26,7 @@ namespace VendingTests
         [TestMethod]
         public void AcceptCoin_Nickel()
         {
-            Assert.AreEqual(1, thisMachine.AcceptCoin());
+            Assert.AreEqual(1, thisMachine.AcceptCoin(Coin.NICKEL.Item1, Coin.NICKEL.Item2));
         }
 
         //[TestMethod]
