@@ -15,7 +15,7 @@ namespace VendingMachineKata
         
         public static bool isValidCoin(double diameter, double weight)
         {
-            return false;
+            return true;
         }
     }
 }
