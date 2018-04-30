@@ -8,5 +8,9 @@ namespace VendingMachine
 {
     public class VendingMachine
     {
+        public int AcceptCoin()
+        {
+            
+        }
     }
 }
