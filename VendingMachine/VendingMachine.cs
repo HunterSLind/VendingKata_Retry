@@ -15,7 +15,7 @@ namespace VendingMachineKata
 
         public int SelectProduct()
         {
-            
+            return 1;
         }
     }
 }
