@@ -21,14 +21,7 @@ namespace VendingMachineKata
 
         public static bool isValidCoin(double diameter, double weight)
         {
-            if (VALIDCOINDICTIONARY.ContainsKey(new Tuple<double, double>(diameter, weight)))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (VALIDCOINDICTIONARY.ContainsKey(new Tuple<double, double>(diameter, weight)));
         }
     }
 }
