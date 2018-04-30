@@ -27,7 +27,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Nickel()
         {
-            Assert.AreEqual(false, Coin.isValidCoin());
+            Assert.AreEqual(true, Coin.isValidCoin(Coin.NICKEL.Item1, Coin.NICKEL.Item2));
         }
     }
 }
