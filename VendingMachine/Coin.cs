@@ -16,6 +16,7 @@ namespace VendingMachineKata
 
         private static readonly Dictionary<Tuple<double, double>, int> VALIDCOINDICTIONARY = new Dictionary<Tuple<double, double>, int>()
         {
+            {NICKEL, 5 },
         };
 
         public static bool isValidCoin(double diameter, double weight)
