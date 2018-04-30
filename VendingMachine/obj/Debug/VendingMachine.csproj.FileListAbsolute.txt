@@ -1,0 +1,2 @@
+D:\VendingMachine2\VendingKata_Retry\VendingMachine\obj\Debug\VendingMachine.csprojResolveAssemblyReference.cache
+D:\VendingMachine2\VendingKata_Retry\VendingMachine\obj\Debug\VendingMachine.csproj.CoreCompileInputs.cache
