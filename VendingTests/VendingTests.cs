@@ -23,48 +23,48 @@ namespace VendingTests
             Assert.AreEqual(1, thisMachine.AcceptCoin());
         }
 
-        [TestMethod]
-        public void AcceptCoin_Nickel()
-        {
-            Assert.AreEqual(1, thisMachine.AcceptCoin());
-        }
+        //[TestMethod]
+        //public void AcceptCoin_Nickel()
+        //{
+        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
+        //}
 
-        [TestMethod]
-        public void AcceptCoin_Dime()
-        {
-            Assert.AreEqual(1, thisMachine.AcceptCoin());
-        }
+        //[TestMethod]
+        //public void AcceptCoin_Dime()
+        //{
+        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
+        //}
 
-        [TestMethod]
-        public void AcceptCoin_Quarter()
-        {
-            Assert.AreEqual(1, thisMachine.AcceptCoin());
-        }
+        //[TestMethod]
+        //public void AcceptCoin_Quarter()
+        //{
+        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
+        //}
 
-        [TestMethod]
-        public void DeclineCoin_BadCoin()
-        {
-            Assert.AreEqual(1, thisMachine.AcceptCoin());
-        }
+        //[TestMethod]
+        //public void DeclineCoin_BadCoin()
+        //{
+        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
+        //}
 
 
-        [TestMethod]
-        public void SelectProduct_Chips()
-        {
-            Assert.AreEqual(1, thisMachine.SelectProduct());
-        }
+        //[TestMethod]
+        //public void SelectProduct_Chips()
+        //{
+        //    Assert.AreEqual(1, thisMachine.SelectProduct());
+        //}
 
-        [TestMethod]
-        public void SelectProduct_Cola()
-        {
-            Assert.AreEqual(1, thisMachine.SelectProduct());
-        }
+        //[TestMethod]
+        //public void SelectProduct_Cola()
+        //{
+        //    Assert.AreEqual(1, thisMachine.SelectProduct());
+        //}
 
-        [TestMethod]
-        public void SelectProduct_Candy()
-        {
-            Assert.AreEqual(1, thisMachine.SelectProduct());
-        }
+        //[TestMethod]
+        //public void SelectProduct_Candy()
+        //{
+        //    Assert.AreEqual(1, thisMachine.SelectProduct());
+        //}
 
         [TestMethod]
         public void MakeChange()

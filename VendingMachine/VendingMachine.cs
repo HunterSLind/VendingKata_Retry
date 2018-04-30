@@ -8,8 +8,12 @@ namespace VendingMachineKata
 {
     public class VendingMachine
     {
-        public int AcceptCoin()
+        public int AcceptCoin(double diameter, double weight)
         {
+            if(Coin.isValidCoin(diameter, weight))
+            {
+                return 1;
+            }
             return 0;
         }
 
