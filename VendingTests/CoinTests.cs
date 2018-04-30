@@ -19,9 +19,9 @@ namespace VendingTests
         }
 
         [TestMethod]
-        public void ValidCoin()
+        public void ValidCoin_Penny()
         {
-            Assert.AreEqual(0, 1);
+            Assert.AreEqual(true, Coin.isValidCoin(Coin.PENNY.Item1, Coin.PENNY.Item2));
         }
     }
 }

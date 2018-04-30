@@ -13,5 +13,9 @@ namespace VendingMachineKata
         /// </summary>
         public static readonly Tuple<double, double> PENNY = new Tuple<double, double>(19, 2.5);
         
+        public static bool isValidCoin(double diameter, double weight)
+        {
+            return false;
+        }
     }
 }
