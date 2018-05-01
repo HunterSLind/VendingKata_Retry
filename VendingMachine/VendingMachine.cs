@@ -10,6 +10,11 @@ namespace VendingMachineKata
     {
         public int InsertedAmount = 0;
 
+        /// <summary>
+        /// Determines if inserted coin has any value. 
+        /// </summary>
+        /// <param name="diameter"></param>
+        /// <param name="weight"></param>
         public void AcceptCoin(double diameter, double weight)
         {
             if(Coin.CoinValue(diameter, weight) != 0)
