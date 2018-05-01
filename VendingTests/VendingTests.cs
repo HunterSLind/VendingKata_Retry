@@ -31,24 +31,6 @@ namespace VendingTests
             Assert.AreEqual(5, thisMachine.InsertedAmount);
         }
 
-        //[TestMethod]
-        //public void AcceptCoin_Dime()
-        //{
-        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
-        //}
-
-        //[TestMethod]
-        //public void AcceptCoin_Quarter()
-        //{
-        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
-        //}
-
-        //[TestMethod]
-        //public void DeclineCoin_BadCoin()
-        //{
-        //    Assert.AreEqual(1, thisMachine.AcceptCoin());
-        //}
-
 
         //[TestMethod]
         //public void SelectProduct_Chips()
