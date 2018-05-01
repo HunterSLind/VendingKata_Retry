@@ -21,13 +21,13 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Penny()
         {
-            Assert.AreEqual(false, Coin.isValidCoin(Coin.PENNY.Item1, Coin.PENNY.Item2));
+            Assert.AreEqual(0, Coin.isValidCoin(Coin.PENNY.Item1, Coin.PENNY.Item2));
         }
 
         [TestMethod]
         public void ValidCoin_Nickel()
         {
-            Assert.AreEqual(true, Coin.isValidCoin(Coin.NICKEL.Item1, Coin.NICKEL.Item2));
+            Assert.AreEqual(5, Coin.isValidCoin(Coin.NICKEL.Item1, Coin.NICKEL.Item2));
         }
     }
 }
