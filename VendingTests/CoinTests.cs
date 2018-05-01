@@ -29,5 +29,11 @@ namespace VendingTests
         {
             Assert.AreEqual(5, Coin.CoinValue(Coin.NICKEL.Item1, Coin.NICKEL.Item2));
         }
+
+        [TestMethod]
+        public void ValidCoin_Quarter()
+        {
+            Assert.AreEqual(25, Coin.CoinValue(24.3, 5.7));
+        }
     }
 }
