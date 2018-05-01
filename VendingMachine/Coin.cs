@@ -19,7 +19,7 @@ namespace VendingMachineKata
             {NICKEL, 5 },
         };
 
-        public static int isValidCoin(double diameter, double weight)
+        public static int CoinValue(double diameter, double weight)
         {
             Tuple<double, double> coinTuple = new Tuple<double, double>(diameter, weight);
             if(VALIDCOINDICTIONARY.ContainsKey(coinTuple))

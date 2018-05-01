@@ -12,7 +12,7 @@ namespace VendingMachineKata
 
         public void AcceptCoin(double diameter, double weight)
         {
-            if(Coin.isValidCoin(diameter, weight) != 0)
+            if(Coin.CoinValue(diameter, weight) != 0)
             {
                 // if coin is accepted, add to amount.
             }
