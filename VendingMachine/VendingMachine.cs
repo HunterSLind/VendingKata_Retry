@@ -15,6 +15,7 @@ namespace VendingMachineKata
             if(Coin.CoinValue(diameter, weight) != 0)
             {
                 // if coin is accepted, add to amount.
+                InsertedAmount += Coin.CoinValue(diameter, weight);
             }
             // if coin is not accepted, don't add to amount
         }
