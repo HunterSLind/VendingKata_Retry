@@ -33,7 +33,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Quarter()
         {
-            Assert.AreEqual(25, Coin.CoinValue(24.3, 5.7));
+            Assert.AreEqual(25, Coin.CoinValue(Coin.QUARTER.Item1, Coin.QUARTER.Item2));
         }
     }
 }
