@@ -18,6 +18,7 @@ namespace VendingMachineKata
         private static readonly Dictionary<Tuple<double, double>, int> VALIDCOINDICTIONARY = new Dictionary<Tuple<double, double>, int>()
         {
             {NICKEL, 5 },
+            {new Tuple<double, double>(17.9, 2.3), 10 },
             {QUARTER, 25 }
         };
 
