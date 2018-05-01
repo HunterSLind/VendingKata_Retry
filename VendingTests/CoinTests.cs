@@ -33,7 +33,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Dime()
         {
-            Assert.AreEqual(10, Coin.CoinValue(17.9, 2.3));
+            Assert.AreEqual(10, Coin.CoinValue(Coin.DIME.Item1, Coin.DIME.Item2));
         }
 
         [TestMethod]
