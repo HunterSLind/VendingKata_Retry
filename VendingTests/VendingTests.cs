@@ -32,29 +32,7 @@ namespace VendingTests
         }
 
 
-        //[TestMethod]
-        //public void SelectProduct_Chips()
-        //{
-        //    Assert.AreEqual(1, thisMachine.SelectProduct());
-        //}
-
-        //[TestMethod]
-        //public void SelectProduct_Cola()
-        //{
-        //    Assert.AreEqual(1, thisMachine.SelectProduct());
-        //}
-
-        //[TestMethod]
-        //public void SelectProduct_Candy()
-        //{
-        //    Assert.AreEqual(1, thisMachine.SelectProduct());
-        //}
-
-        [TestMethod]
-        public void MakeChange()
-        {
-            
-        }
+        
         
 
         
