@@ -13,12 +13,13 @@ namespace VendingMachineKata
         /// </summary>
         public static readonly Tuple<double, double> PENNY = new Tuple<double, double>(19, 2.5);
         public static readonly Tuple<double, double> NICKEL = new Tuple<double, double>(21.2, 5);
+        public static readonly Tuple<double, double> DIME = new Tuple<double, double>(17.9, 2.3);
         public static readonly Tuple<double, double> QUARTER = new Tuple<double, double>(24.3, 5.7);
 
         private static readonly Dictionary<Tuple<double, double>, int> VALIDCOINDICTIONARY = new Dictionary<Tuple<double, double>, int>()
         {
             {NICKEL, 5 },
-            {new Tuple<double, double>(17.9, 2.3), 10 },
+            {DIME, 10},
             {QUARTER, 25 }
         };
 
