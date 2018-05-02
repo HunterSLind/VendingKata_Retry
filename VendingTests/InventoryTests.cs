@@ -39,9 +39,9 @@ namespace VendingTests
         [TestMethod]
         public void IsProductOutOfStock()
         {
-            thisInventory = new Inventory(new Dictionary<int, int>()
+            thisInventory = new Inventory(new Dictionary<int, ProductInfo>()
             {
-                {1, 0 }
+                {1, new ProductInfo(0, 0) }
             });
             Assert.IsFalse(thisInventory.IsProductInStock(1));
         }
