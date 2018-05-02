@@ -45,6 +45,7 @@ namespace VendingMachineKata
 
         public void Withdraw(int productID)
         {
+            InventoryInfo[productID].Stock -= 1;
         }
     }
 }
