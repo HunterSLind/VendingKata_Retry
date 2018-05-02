@@ -51,5 +51,11 @@ namespace VendingTests
         {
             Assert.IsTrue(thisInventory.IsEnoughMoneyForProduct(ProductInfo.COLAID, ProductInfo.COLAPRICE));
         }
+
+        [TestMethod]
+        public void CalculateChange_NoChange()
+        {
+            Assert.AreEqual(0, thisInventory.CalculateChange(ProductInfo.COLAID, ProductInfo.COLAPRICE));
+        }
     }
 }
