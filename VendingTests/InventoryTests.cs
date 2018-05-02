@@ -21,19 +21,19 @@ namespace VendingTests
         [TestMethod]
         public void IsProductInStock_Cola()
         {
-            Assert.IsTrue(thisInventory.IsProductInStock(1));
+            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.COLAID));
         }
 
         [TestMethod]
         public void IsProductInStock_Chips()
         {
-            Assert.IsTrue(thisInventory.IsProductInStock(2));
+            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.CHIPID));
         }
 
         [TestMethod]
         public void IsProductInStock_Candy()
         {
-            Assert.IsTrue(thisInventory.IsProductInStock(3));
+            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.CANDYID));
         }
 
         [TestMethod]

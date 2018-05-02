@@ -8,6 +8,10 @@ namespace VendingMachineKata
 {
     public class ProductInfo
     {
+        public static int COLAID = 1;
+        public static int CHIPID = 2;
+        public static int CANDYID = 3;
+
         public int Price { get; set; }
         public int Stock { get; set; }
 
