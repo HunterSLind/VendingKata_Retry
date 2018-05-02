@@ -42,5 +42,10 @@ namespace VendingMachineKata
         {
             return moneyDeposited - InventoryInfo[productID].Price;
         }
+
+        public void Withdraw(int productID)
+        {
+
+        }
     }
 }
