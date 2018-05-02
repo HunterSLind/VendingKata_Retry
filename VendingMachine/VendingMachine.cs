@@ -16,7 +16,7 @@ namespace VendingMachineKata
 
         public VendingMachine()
         {
-            machineBank = new Coin(10, 10, 10);
+            machineBank = new Coin(0, 0, 0);
             machineInventory = new Inventory();
         }
 
@@ -49,8 +49,11 @@ namespace VendingMachineKata
                         return true;
                     }
                     // EXACT CHANGE ONLY
+                    displayMessage = "EXACT CHANGE ONLY";
+                    return false;
                 }
                 displayMessage = "PRICE: " + machineInventory.InventoryInfo[productID].Price;
+                return false;
             }
             displayMessage = "SOLD OUT";
             // SOLD OUT
