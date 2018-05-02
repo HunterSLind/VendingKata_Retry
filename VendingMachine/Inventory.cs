@@ -34,21 +34,6 @@ namespace VendingMachineKata
         public bool IsProductInStock(int productID)
         {
             return (InventoryLevels[productID] > 0);
-            //// cola productID is 1
-            //if (productID == ColaInventory.Item1)
-            //{
-            //    // check cola inventory levels, if there are colas remaining, return true.
-            //    return (ColaInventory.Item2 > 0);
-            //}
-            //if (productID == ChipInventory.Item1)
-            //{
-            //    return (ChipInventory.Item2 > 0);
-            //}
-            //if (productID == CandyInventory.Item1)
-            //{
-            //    return (CandyInventory.Item2 > 0);
-            //}
-            //return false;
         }
     }
 }
