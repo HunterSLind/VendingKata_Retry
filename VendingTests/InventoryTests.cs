@@ -5,7 +5,7 @@ using VendingMachineKata;
 namespace VendingTests
 {
     [TestClass]
-    public class ProductTests
+    public class InventoryTests
     {
         Inventory thisInventory;
         /// <summary>
@@ -20,7 +20,7 @@ namespace VendingTests
         [TestMethod]
         public void SelectProduct_Cola()
         {
-            Assert.AreEqual(0, thisInventory);
+            Assert.AreEqual(0, thisInventory.SelectProduct());
         }
     }
 }
