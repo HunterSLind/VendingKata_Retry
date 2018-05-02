@@ -62,5 +62,15 @@ namespace VendingTests
             Assert.AreEqual(thisMachine.Display(), "PRICE: " + ProductInfo.COLAPRICE);
         }
 
+        [TestMethod]
+        public void DispenseProduct_No_OutOfStock()
+        {
+            for(int i = 0; i <= ProductInfo.COLASTOCK; i++)
+            {
+                thisMachine.DispenseProduct(ProductInfo.COLAID);
+            }
+            Assert.AreEqual(thisMachine.Display(), "SOLD OUT");
+        }
+
     }
 }
