@@ -75,7 +75,10 @@ namespace VendingTests
         [TestMethod]
         public void DispenseProduct_No_ExactChangeOnly()
         {
-            thisMachine.DispenseProduct(ProductInfo.COLAID);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.DispenseProduct(ProductInfo.CANDYID);
             Assert.AreEqual(thisMachine.Display(), "EXACT CHANGE ONLY");
         }
 
