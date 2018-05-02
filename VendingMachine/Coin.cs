@@ -58,5 +58,7 @@ namespace VendingMachineKata
         {
             Coins[coinValue]++;
         }
+
+        
     }
 }
