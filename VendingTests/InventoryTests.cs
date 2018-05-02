@@ -69,7 +69,7 @@ namespace VendingTests
         {
             int baseStock = thisInventory.InventoryInfo[ProductInfo.COLAID].Stock;
             thisInventory.Withdraw(ProductInfo.COLAID);
-            Assert.AreEqual(baseStock + 1, thisInventory.InventoryInfo[ProductInfo.COLAID].Stock);
+            Assert.AreEqual(baseStock - 1, thisInventory.InventoryInfo[ProductInfo.COLAID].Stock);
         }
     }
 }

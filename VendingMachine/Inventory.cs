@@ -45,7 +45,6 @@ namespace VendingMachineKata
 
         public void Withdraw(int productID)
         {
-
         }
     }
 }
