@@ -61,7 +61,27 @@ namespace VendingMachineKata
 
         public bool AbleToMakeChange(int change)
         {
-            return false;
+            Dictionary<int, int> changeDictionary = new Dictionary<int, int>()
+            {
+                {5, 0 },
+                {10, 0 },
+                {25, 0 }
+            };
+
+            foreach (var coin in Coins.Keys.OrderByDescending(a => a))
+            {
+                while (change >= coin && changeDictionary[coin] < Coins[coin])
+                {
+                    changeDictionary[coin] += 1;
+                    change -= coin;
+                }
+            }
+
+            if (change > 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
