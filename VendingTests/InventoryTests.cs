@@ -18,9 +18,9 @@ namespace VendingTests
         }
 
         [TestMethod]
-        public void SelectProduct_Cola()
+        public void IsProductInStock()
         {
-            Assert.AreEqual(0, thisInventory.SelectProduct(1));
+            Assert.IsTrue(thisInventory.IsProductInStock(1));
         }
     }
 }
