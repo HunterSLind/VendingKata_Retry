@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendingMachineKata;
 
@@ -37,7 +38,13 @@ namespace VendingTests
 
         [TestMethod]
         public void IsProductOutOfStock_Cola()
-        { 
+        {
+            thisInventory = new Inventory(new Dictionary<int, int>()
+            {
+                {1, 0 },
+                {2, 0 },
+                {3, 0 }
+            });
             Assert.IsFalse(thisInventory.IsProductInStock(1));
         }
     }
