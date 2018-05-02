@@ -80,5 +80,12 @@ namespace VendingMachineKata
         {
             return displayMessage;
         }
+
+        public Dictionary<int, int> ReturnChange()
+        {
+            Dictionary<int, int> returnChangeDictionary =  MachineBank.MakeChange(this.InsertedAmount);
+            this.InsertedAmount = 0;
+            return returnChangeDictionary;
+        }
     }
 }
