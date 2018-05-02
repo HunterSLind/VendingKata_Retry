@@ -31,6 +31,7 @@ namespace VendingTests
             Assert.AreEqual(5, thisMachine.InsertedAmount);
         }
 
+        [TestMethod]
         public void DispenseProduct_Yes()
         {
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);

@@ -25,5 +25,9 @@ namespace VendingMachineKata
             // if coin is not accepted, don't add to amount
         }
         
+        public bool DispenseProduct(int productID)
+        {
+            return false;
+        }
     }
 }
