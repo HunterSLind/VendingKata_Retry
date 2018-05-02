@@ -22,5 +22,11 @@ namespace VendingTests
         {
             Assert.IsTrue(thisInventory.IsProductInStock(1));
         }
+
+        [TestMethod]
+        public void IsProductInStock_Chips()
+        {
+            Assert.IsTrue(thisInventory.IsProductInStock(2));
+        }
     }
 }
