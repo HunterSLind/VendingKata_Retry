@@ -42,5 +42,15 @@ namespace VendingTests
             Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.COLAID));
         }
 
+        [TestMethod]
+        public void DispenseProduct_No()
+        {
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+
+            Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.COLAID));
+        }
+
     }
 }
