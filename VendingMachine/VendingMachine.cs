@@ -35,6 +35,22 @@ namespace VendingMachineKata
 
         public bool DispenseProduct(int productID)
         {
+            // first, check that the product is in stock
+            if (machineInventory.IsProductInStock(productID))
+            {
+                // then check that there is enough money in the machine for the product
+                if (machineInventory.IsEnoughMoneyForProduct(productID, InsertedAmount))
+                {
+                    // lastly, make sure we can make change for the purchase
+                    if (machineBank.AbleToMakeChange(machineInventory.CalculateChange(productID, InsertedAmount)))
+                    {
+                        return true;
+                    }
+                    // EXACT CHANGE ONLY
+                }
+                // PRICE: [Item Price]
+            }
+            // SOLD OUT
             return false;
         }
     }
