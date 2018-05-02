@@ -115,5 +115,10 @@ namespace VendingTests
             Assert.AreEqual(expectedResultDictionary[10], actualResultDictionary[10]);
             Assert.AreEqual(expectedResultDictionary[25], actualResultDictionary[25]);
         }
+
+        public void WithdrawChange()
+        {
+            // Make sure that when we call Withdraw Change, change is removed from the bank.
+        }
     }
 }
