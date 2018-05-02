@@ -67,6 +67,10 @@ namespace VendingTests
         {
             for (int i = 0; i <= ProductInfo.COLASTOCK; i++)
             {
+                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
                 thisMachine.DispenseProduct(ProductInfo.COLAID);
             }
             Assert.AreEqual("SOLD OUT", thisMachine.Display());
