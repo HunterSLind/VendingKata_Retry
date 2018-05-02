@@ -8,9 +8,9 @@ namespace VendingMachineKata
 {
     public class Inventory
     {
-        public int SelectProduct()
+        public int SelectProduct(int productID)
         {
-            return 1;
+            return productID;
         }
     }
 }

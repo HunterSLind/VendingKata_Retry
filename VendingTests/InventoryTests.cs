@@ -20,7 +20,7 @@ namespace VendingTests
         [TestMethod]
         public void SelectProduct_Cola()
         {
-            Assert.AreEqual(0, thisInventory.SelectProduct());
+            Assert.AreEqual(0, thisInventory.SelectProduct(1));
         }
     }
 }
