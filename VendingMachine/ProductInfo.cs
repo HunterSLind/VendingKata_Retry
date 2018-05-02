@@ -9,6 +9,12 @@ namespace VendingMachineKata
     public class ProductInfo
     {
         public int Price { get; set; }
-        public int InventoryLevel { get; set; }
+        public int Stock { get; set; }
+
+        public ProductInfo(int price, int stock)
+        {
+            Price = price;
+            Stock = stock;
+        }
     }
 }
