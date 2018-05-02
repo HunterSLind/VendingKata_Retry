@@ -33,7 +33,12 @@ namespace VendingTests
 
         public void DispenseProduct_Yes()
         {
-            Assert.IsTrue(thisMachine.DispenseProduct(1));
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+
+            Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.COLAID));
         }
 
     }
