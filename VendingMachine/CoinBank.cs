@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VendingMachineKata
 {
-    public class Coin
+    public class CoinBank
     {
         /// <summary>
         /// The following Tuple values are the diameter (cm) and weight (g) of known coins, stored respectively.
@@ -36,7 +36,7 @@ namespace VendingMachineKata
             {25, 0 }
         };
 
-        public Coin(int numberOfNickels = 0, int numberOfDimes = 0, int numberOfQuarters = 0)
+        public CoinBank(int numberOfNickels = 0, int numberOfDimes = 0, int numberOfQuarters = 0)
         {
             Coins[5] = numberOfNickels;
             Coins[10] = numberOfDimes;

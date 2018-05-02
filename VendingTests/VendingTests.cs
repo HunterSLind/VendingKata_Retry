@@ -20,24 +20,24 @@ namespace VendingTests
         [TestMethod]
         public void DeclineCoin_Penny()
         {
-            thisMachine.AcceptCoin(Coin.PENNY.Item1, Coin.PENNY.Item2);
+            thisMachine.AcceptCoin(CoinBank.PENNY.Item1, CoinBank.PENNY.Item2);
             Assert.AreEqual(0, thisMachine.InsertedAmount);
         }
 
         [TestMethod]
         public void AcceptValidCoin()
         {
-            thisMachine.AcceptCoin(Coin.NICKEL.Item1, Coin.NICKEL.Item2);
+            thisMachine.AcceptCoin(CoinBank.NICKEL.Item1, CoinBank.NICKEL.Item2);
             Assert.AreEqual(5, thisMachine.InsertedAmount);
         }
 
         [TestMethod]
         public void DispenseProduct_Yes()
         {
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
 
             Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.COLAID));
         }
@@ -45,9 +45,9 @@ namespace VendingTests
         [TestMethod]
         public void DispenseProduct_No()
         {
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
 
             Assert.IsFalse(thisMachine.DispenseProduct(ProductInfo.COLAID));
         }
@@ -55,9 +55,9 @@ namespace VendingTests
         [TestMethod]
         public void DispenseProduct_No_NotEnoughMoney()
         {
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.DispenseProduct(ProductInfo.COLAID);
             Assert.AreEqual("PRICE: " + ProductInfo.COLAPRICE, thisMachine.Display());
         }
@@ -67,10 +67,10 @@ namespace VendingTests
         {
             for (int i = 0; i <= ProductInfo.COLASTOCK; i++)
             {
-                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-                thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+                thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+                thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+                thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+                thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
                 thisMachine.DispenseProduct(ProductInfo.COLAID);
             }
             Assert.AreEqual("SOLD OUT", thisMachine.Display());
@@ -79,9 +79,9 @@ namespace VendingTests
         [TestMethod]
         public void DispenseProduct_No_ExactChangeOnly()
         {
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
-            thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
+            thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.DispenseProduct(ProductInfo.CANDYID);
             Assert.AreEqual("EXACT CHANGE ONLY", thisMachine.Display());
         }

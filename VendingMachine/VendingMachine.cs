@@ -9,14 +9,14 @@ namespace VendingMachineKata
     public class VendingMachine
     {
         public int InsertedAmount = 0;
-        public Coin machineBank;
+        public CoinBank machineBank;
         public Inventory machineInventory;
 
         public string displayMessage = "";
 
         public VendingMachine()
         {
-            machineBank = new Coin(0, 0, 0);
+            machineBank = new CoinBank(0, 0, 0);
             machineInventory = new Inventory();
         }
 
@@ -27,9 +27,9 @@ namespace VendingMachineKata
         /// <param name="weight"></param>
         public void AcceptCoin(double diameter, double weight)
         {
-            if (Coin.CoinValue(diameter, weight) != 0)
+            if (CoinBank.CoinValue(diameter, weight) != 0)
             {
-                int valueOfCoin = Coin.CoinValue(diameter, weight);
+                int valueOfCoin = CoinBank.CoinValue(diameter, weight);
                 updateBankAndBalance(valueOfCoin);
             }
             // if coin is not accepted, don't add to amount

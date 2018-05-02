@@ -8,7 +8,7 @@ namespace VendingTests
     [TestClass]
     public class CoinTests
     {
-        Coin testCoinBank;
+        CoinBank testCoinBank;
 
         /// <summary>
         /// Test initialization: Creates a clean Coin Object
@@ -16,7 +16,7 @@ namespace VendingTests
         [TestInitialize]
         public void testInit()
         {
-            testCoinBank = new Coin();
+            testCoinBank = new CoinBank();
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Penny()
         {
-            Assert.AreEqual(0, Coin.CoinValue(Coin.PENNY.Item1, Coin.PENNY.Item2));
+            Assert.AreEqual(0, CoinBank.CoinValue(CoinBank.PENNY.Item1, CoinBank.PENNY.Item2));
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Nickel()
         {
-            Assert.AreEqual(5, Coin.CoinValue(Coin.NICKEL.Item1, Coin.NICKEL.Item2));
+            Assert.AreEqual(5, CoinBank.CoinValue(CoinBank.NICKEL.Item1, CoinBank.NICKEL.Item2));
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Dime()
         {
-            Assert.AreEqual(10, Coin.CoinValue(Coin.DIME.Item1, Coin.DIME.Item2));
+            Assert.AreEqual(10, CoinBank.CoinValue(CoinBank.DIME.Item1, CoinBank.DIME.Item2));
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace VendingTests
         [TestMethod]
         public void ValidCoin_Quarter()
         {
-            Assert.AreEqual(25, Coin.CoinValue(Coin.QUARTER.Item1, Coin.QUARTER.Item2));
+            Assert.AreEqual(25, CoinBank.CoinValue(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2));
         }
 
         [TestMethod]
@@ -72,14 +72,14 @@ namespace VendingTests
         [TestMethod]
         public void AbleToMakeChange_25NoQuarters()
         {
-            testCoinBank = new Coin(20, 10);
+            testCoinBank = new CoinBank(20, 10);
             Assert.IsTrue(testCoinBank.AbleToMakeChange(25));
         }
         
         [TestMethod]
         public void AbleToMakeChange_Unable()
         {
-            testCoinBank = new Coin(4);
+            testCoinBank = new CoinBank(4);
             Assert.IsFalse(testCoinBank.AbleToMakeChange(25));
         }
 
@@ -102,7 +102,7 @@ namespace VendingTests
         [TestMethod]
         public void MakeChange_25()
         {
-            testCoinBank = new Coin(0, 0, 1);
+            testCoinBank = new CoinBank(0, 0, 1);
             Dictionary<int, int> expectedResultDictionary = new Dictionary<int, int>()
             {
                 {5, 0 },
