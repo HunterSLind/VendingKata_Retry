@@ -45,5 +45,11 @@ namespace VendingTests
             });
             Assert.IsFalse(thisInventory.IsProductInStock(1));
         }
+
+        [TestMethod]
+        public void IsEnoughMoneyForProduct()
+        {
+            Assert.IsTrue(Inventory.EnoughMoney());
+        }
     }
 }
