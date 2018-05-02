@@ -102,6 +102,7 @@ namespace VendingTests
         [TestMethod]
         public void MakeChange_25()
         {
+            testCoinBank = new Coin(0, 0, 1);
             Dictionary<int, int> expectedResultDictionary = new Dictionary<int, int>()
             {
                 {5, 0 },
