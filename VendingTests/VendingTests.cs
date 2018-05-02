@@ -31,10 +31,5 @@ namespace VendingTests
             Assert.AreEqual(5, thisMachine.InsertedAmount);
         }
 
-
-        
-        
-
-        
     }
 }
