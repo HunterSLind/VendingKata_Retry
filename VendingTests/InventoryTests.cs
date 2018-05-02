@@ -57,5 +57,11 @@ namespace VendingTests
         {
             Assert.AreEqual(0, thisInventory.CalculateChange(ProductInfo.COLAID, ProductInfo.COLAPRICE));
         }
+
+        [TestMethod]
+        public void CalculateChange_SomeChange()
+        {
+            Assert.AreEqual(10, thisInventory.CalculateChange(ProductInfo.COLAID, (ProductInfo.COLAPRICE + 10)));
+        }
     }
 }
