@@ -36,6 +36,13 @@ namespace VendingMachineKata
             {25, 0 }
         };
 
+        public Coin(int numberOfNickels = 0, int numberOfDimes = 0, int numberOfQuarters = 0)
+        {
+            Coins[5] = numberOfNickels;
+            Coins[10] = numberOfDimes;
+            Coins[25] = numberOfQuarters;
+        }
+
 
         public static int CoinValue(double diameter, double weight)
         {
