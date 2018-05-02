@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace VendingTests
 {
     [TestClass]
-    public class ProductTest
+    public class ProductTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SelectProduct_Cola()
         {
         }
     }
