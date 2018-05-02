@@ -93,7 +93,14 @@ namespace VendingMachineKata
                 {25, 0 }
             };
 
-
+            foreach (var coin in Coins.Keys.OrderByDescending(a => a))
+            {
+                while (change >= coin && changeDictionary[coin] < Coins[coin])
+                {
+                    changeDictionary[coin] += 1;
+                    change -= coin;
+                }
+            }
             return changeDictionary;
         }
     }
