@@ -12,6 +12,8 @@ namespace VendingMachineKata
         public Coin machineBank;
         public Inventory machineInventory;
 
+        public string displayMessage = "";
+
         public VendingMachine()
         {
             machineBank = new Coin(10, 10, 10);
@@ -52,6 +54,11 @@ namespace VendingMachineKata
             }
             // SOLD OUT
             return false;
+        }
+
+        public string Display()
+        {
+            return displayMessage;
         }
     }
 }
