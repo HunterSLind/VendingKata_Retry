@@ -59,6 +59,9 @@ namespace VendingMachineKata
             Coins[coinValue]++;
         }
 
-        
+        public bool AbleToMakeChange(int change)
+        {
+            return false;
+        }
     }
 }
