@@ -12,7 +12,7 @@ namespace VendingMachineKata
         Tuple<int, int> ColaInventory = new Tuple<int, int>(1, 5);
 
 
-        public bool SelectProduct(int productID)
+        public bool ProductInStock(int productID)
         {
             // cola productID is 1
             if(productID == ColaInventory.Item1)
