@@ -35,7 +35,7 @@ namespace VendingMachineKata
 
         public bool IsEnoughMoneyForProduct(int productID, int moneyDeposited)
         {
-            return (InventoryLevels[productID].Price < moneyDeposited);
+            return (InventoryLevels[productID].Price <= moneyDeposited);
         }
     }
 }
