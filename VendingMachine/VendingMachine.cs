@@ -9,15 +9,15 @@ namespace VendingMachineKata
     public class VendingMachine
     {
         public int InsertedAmount = 0;
-        public CoinBank machineBank;
-        public Inventory machineInventory;
+        public CoinBank MachineBank;
+        public Inventory MachineInventory;
 
         public string displayMessage = "";
 
         public VendingMachine()
         {
-            machineBank = new CoinBank(0, 0, 0);
-            machineInventory = new Inventory();
+            MachineBank = new CoinBank(0, 0, 0);
+            MachineInventory = new Inventory();
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace VendingMachineKata
 
         private void updateBankAndBalance(int valueOfCoin)
         {
-            machineBank.AddCoin(valueOfCoin);
+            MachineBank.AddCoin(valueOfCoin);
             // if coin is accepted, add to amount.
             InsertedAmount += valueOfCoin;
         }
@@ -45,16 +45,16 @@ namespace VendingMachineKata
         public bool DispenseProduct(int productID)
         {
             // first, check that the product is in stock
-            if (machineInventory.IsProductInStock(productID))
+            if (MachineInventory.IsProductInStock(productID))
             {
                 // then check that there is enough money in the machine for the product
-                if (machineInventory.IsEnoughMoneyForProduct(productID, InsertedAmount))
+                if (MachineInventory.IsEnoughMoneyForProduct(productID, InsertedAmount))
                 {
                     // lastly, make sure we can make change for the purchase
-                    if (machineBank.AbleToMakeChange(machineInventory.CalculateChange(productID, InsertedAmount)))
+                    if (MachineBank.AbleToMakeChange(MachineInventory.CalculateChange(productID, InsertedAmount)))
                     {
                         // withdraw item from inventory
-                        machineInventory.Withdraw(productID);
+                        MachineInventory.Withdraw(productID);
                         // empty inserted amount
                         InsertedAmount = 0;
                         return true;
@@ -63,7 +63,7 @@ namespace VendingMachineKata
                     displayMessage = "EXACT CHANGE ONLY";
                     return false;
                 }
-                displayMessage = "PRICE: " + machineInventory.InventoryInfo[productID].Price;
+                displayMessage = "PRICE: " + MachineInventory.InventoryInfo[productID].Price;
                 return false;
             }
             displayMessage = "SOLD OUT";
