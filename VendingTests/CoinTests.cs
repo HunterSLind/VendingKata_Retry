@@ -61,6 +61,12 @@ namespace VendingTests
             testCoinBank.AddCoin(5);
             Assert.AreEqual(originalCount + 1, testCoinBank.Coins[5]);
         }
+
+        [TestMethod]
+        public void CheckIfAbleToMakeChange_NoChange()
+        {
+            Assert.IsTrue(testCoinBank.AbleToMakeChange(25));
+        }
         
         //[TestMethod]
         //public void MakeChange_NoChange()
