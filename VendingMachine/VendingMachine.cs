@@ -50,7 +50,7 @@ namespace VendingMachineKata
                     }
                     // EXACT CHANGE ONLY
                 }
-                // PRICE: [Item Price]
+                displayMessage = "PRICE: " + machineInventory.InventoryInfo[productID].Price;
             }
             // SOLD OUT
             return false;
