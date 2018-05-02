@@ -72,5 +72,15 @@ namespace VendingTests
             Assert.AreEqual(thisMachine.Display(), "SOLD OUT");
         }
 
+        [TestMethod]
+        public void DispenseProduct_No_ExactChangeOnly()
+        {
+            for (int i = 0; i <= ProductInfo.COLASTOCK; i++)
+            {
+                thisMachine.DispenseProduct(ProductInfo.COLAID);
+            }
+            Assert.AreEqual(thisMachine.Display(), "EXACT CHANGE ONLY");
+        }
+
     }
 }
