@@ -52,6 +52,7 @@ namespace VendingMachineKata
                 }
                 displayMessage = "PRICE: " + machineInventory.InventoryInfo[productID].Price;
             }
+            displayMessage = "SOLD OUT";
             // SOLD OUT
             return false;
         }
