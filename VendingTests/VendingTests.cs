@@ -49,7 +49,7 @@ namespace VendingTests
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
 
-            Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.COLAID));
+            Assert.IsFalse(thisMachine.DispenseProduct(ProductInfo.COLAID));
         }
 
     }
