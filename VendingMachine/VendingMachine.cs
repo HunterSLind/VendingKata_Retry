@@ -46,6 +46,10 @@ namespace VendingMachineKata
                     // lastly, make sure we can make change for the purchase
                     if (machineBank.AbleToMakeChange(machineInventory.CalculateChange(productID, InsertedAmount)))
                     {
+                        // withdraw item from inventory
+                        machineInventory.Withdraw(productID);
+                        // empty inserted amount
+                        InsertedAmount = 0;
                         return true;
                     }
                     // EXACT CHANGE ONLY
