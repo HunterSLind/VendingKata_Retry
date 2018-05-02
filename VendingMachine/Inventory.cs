@@ -9,12 +9,18 @@ namespace VendingMachineKata
     public class Inventory
     {
 
-        Tuple<string, int> ColaInventory = new Tuple<string, int>("Cola", 5);
+        Tuple<int, int> ColaInventory = new Tuple<int, int>(1, 5);
 
 
-        public int SelectProduct(int productID)
+        public bool SelectProduct(int productID)
         {
-            return productID;
+            // cola productID is 1
+            if(productID == ColaInventory.Item1)
+            {
+                // check cola inventory levels, if there are colas remaining, return true.
+                return (ColaInventory.Item2 > 0);
+            }
+            return false;
         }
     }
 }
