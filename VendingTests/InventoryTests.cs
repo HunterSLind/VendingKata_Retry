@@ -34,5 +34,11 @@ namespace VendingTests
         {
             Assert.IsTrue(thisInventory.IsProductInStock(3));
         }
+
+        [TestMethod]
+        public void IsProductOutOfStock_Cola()
+        { 
+            Assert.IsFalse(thisInventory.IsProductInStock(1));
+        }
     }
 }
