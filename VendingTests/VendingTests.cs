@@ -39,7 +39,7 @@ namespace VendingTests
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
 
-            Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.COLAID));
+            Assert.IsTrue(thisMachine.DispenseProduct(ProductInfo.DEFAULTCOLAID));
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace VendingTests
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
 
-            Assert.IsFalse(thisMachine.DispenseProduct(ProductInfo.COLAID));
+            Assert.IsFalse(thisMachine.DispenseProduct(ProductInfo.DEFAULTCOLAID));
         }
 
         [TestMethod]
@@ -58,20 +58,20 @@ namespace VendingTests
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
-            thisMachine.DispenseProduct(ProductInfo.COLAID);
-            Assert.AreEqual("PRICE: " + ProductInfo.COLAPRICE, thisMachine.Display());
+            thisMachine.DispenseProduct(ProductInfo.DEFAULTCOLAID);
+            Assert.AreEqual("PRICE: " + ProductInfo.DEFAULTCOLAPRICE, thisMachine.Display());
         }
 
         [TestMethod]
         public void DispenseProduct_No_OutOfStock()
         {
-            for (int i = 0; i <= ProductInfo.COLASTOCK; i++)
+            for (int i = 0; i <= ProductInfo.DEFAULTCOLASTOCK; i++)
             {
                 thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
                 thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
                 thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
                 thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
-                thisMachine.DispenseProduct(ProductInfo.COLAID);
+                thisMachine.DispenseProduct(ProductInfo.DEFAULTCOLAID);
             }
             Assert.AreEqual("SOLD OUT", thisMachine.Display());
         }
@@ -82,7 +82,7 @@ namespace VendingTests
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
-            thisMachine.DispenseProduct(ProductInfo.CANDYID);
+            thisMachine.DispenseProduct(ProductInfo.DEFAULTCANDYID);
             Assert.AreEqual("EXACT CHANGE ONLY", thisMachine.Display());
         }
 

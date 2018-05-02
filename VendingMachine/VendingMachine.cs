@@ -12,7 +12,7 @@ namespace VendingMachineKata
         public CoinBank MachineBank;
         public Inventory MachineInventory;
 
-        public string displayMessage = "";
+        private string displayMessage = "";
 
         public VendingMachine()
         {
@@ -23,8 +23,8 @@ namespace VendingMachineKata
         /// <summary>
         /// Adds a coins value to the inserted amount.
         /// </summary>
-        /// <param name="diameter"></param>
-        /// <param name="weight"></param>
+        /// <param name="diameter">Diameter of coin</param>
+        /// <param name="weight">Weight of coin</param>
         public void AcceptCoin(double diameter, double weight)
         {
             if (CoinBank.CoinValue(diameter, weight) != 0)
@@ -42,6 +42,11 @@ namespace VendingMachineKata
             InsertedAmount += valueOfCoin;
         }
 
+        /// <summary>
+        /// Determines if a product should be dispensed, if so, returns true.
+        /// </summary>
+        /// <param name="productID"></param>
+        /// <returns></returns>
         public bool DispenseProduct(int productID)
         {
             // first, check that the product is in stock

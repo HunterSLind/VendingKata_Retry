@@ -8,17 +8,17 @@ namespace VendingMachineKata
 {
     public class ProductInfo
     {
-        public static int COLAID = 1;
-        public static int CHIPID = 2;
-        public static int CANDYID = 3;
+        public static int DEFAULTCOLAID = 1;
+        public static int DEFAULTCHIPID = 2;
+        public static int DEFAULTCANDYID = 3;
 
-        public static int COLASTOCK = 5;
-        public static int CHIPSTOCK = 5;
-        public static int CANDYSTOCK = 5;
+        public static int DEFAULTCOLASTOCK = 5;
+        public static int DEFAULTCHIPSTOCK = 5;
+        public static int DEFAULTCANDYSTOCK = 5;
 
-        public static int COLAPRICE = 100;
-        public static int CHIPPRICE = 50;
-        public static int CANDYPRICE = 65;
+        public static int DEFAULTCOLAPRICE = 100;
+        public static int DEFAULTCHIPPRICE = 50;
+        public static int DEFAULTCANDYPRICE = 65;
 
         public int Price { get; set; }
         public int Stock { get; set; }

@@ -21,19 +21,19 @@ namespace VendingTests
         [TestMethod]
         public void IsProductInStock_Cola()
         {
-            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.COLAID));
+            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.DEFAULTCOLAID));
         }
 
         [TestMethod]
         public void IsProductInStock_Chips()
         {
-            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.CHIPID));
+            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.DEFAULTCHIPID));
         }
 
         [TestMethod]
         public void IsProductInStock_Candy()
         {
-            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.CANDYID));
+            Assert.IsTrue(thisInventory.IsProductInStock(ProductInfo.DEFAULTCANDYID));
         }
 
         [TestMethod]
@@ -49,27 +49,27 @@ namespace VendingTests
         [TestMethod]
         public void IsEnoughMoneyForProduct()
         {
-            Assert.IsTrue(thisInventory.IsEnoughMoneyForProduct(ProductInfo.COLAID, ProductInfo.COLAPRICE));
+            Assert.IsTrue(thisInventory.IsEnoughMoneyForProduct(ProductInfo.DEFAULTCOLAID, ProductInfo.DEFAULTCOLAPRICE));
         }
 
         [TestMethod]
         public void CalculateChange_NoChange()
         {
-            Assert.AreEqual(0, thisInventory.CalculateChange(ProductInfo.COLAID, ProductInfo.COLAPRICE));
+            Assert.AreEqual(0, thisInventory.CalculateChange(ProductInfo.DEFAULTCOLAID, ProductInfo.DEFAULTCOLAPRICE));
         }
 
         [TestMethod]
         public void CalculateChange_SomeChange()
         {
-            Assert.AreEqual(10, thisInventory.CalculateChange(ProductInfo.COLAID, (ProductInfo.COLAPRICE + 10)));
+            Assert.AreEqual(10, thisInventory.CalculateChange(ProductInfo.DEFAULTCOLAID, (ProductInfo.DEFAULTCOLAPRICE + 10)));
         }
 
         [TestMethod]
         public void UpdateProductStock()
         {
-            int baseStock = thisInventory.InventoryInfo[ProductInfo.COLAID].Stock;
-            thisInventory.Withdraw(ProductInfo.COLAID);
-            Assert.AreEqual(baseStock - 1, thisInventory.InventoryInfo[ProductInfo.COLAID].Stock);
+            int baseStock = thisInventory.InventoryInfo[ProductInfo.DEFAULTCOLAID].Stock;
+            thisInventory.Withdraw(ProductInfo.DEFAULTCOLAID);
+            Assert.AreEqual(baseStock - 1, thisInventory.InventoryInfo[ProductInfo.DEFAULTCOLAID].Stock);
         }
     }
 }
