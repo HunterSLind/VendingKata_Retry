@@ -8,6 +8,10 @@ namespace VendingMachineKata
 {
     public class Inventory
     {
+
+        Tuple<string, int> ColaInventory = new Tuple<string, int>("Cola", 5);
+
+
         public int SelectProduct(int productID)
         {
             return productID;
