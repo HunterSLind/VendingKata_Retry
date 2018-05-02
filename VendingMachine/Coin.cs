@@ -83,5 +83,16 @@ namespace VendingMachineKata
             }
             return true;
         }
+
+        public Dictionary<int, int> MakeChange(int change)
+        {
+            Dictionary<int, int> changeDictionary = new Dictionary<int, int>()
+            {
+                {5, 0 },
+                {10, 0 },
+                {25, 0 }
+            };
+            return changeDictionary;
+        }
     }
 }

@@ -80,7 +80,7 @@ namespace VendingTests
         public void AbleToMakeChange_Unable()
         {
             testCoinBank = new Coin(4);
-            Assert.IsTrue(testCoinBank.AbleToMakeChange(25));
+            Assert.IsFalse(testCoinBank.AbleToMakeChange(25));
         }
 
         [TestMethod]
