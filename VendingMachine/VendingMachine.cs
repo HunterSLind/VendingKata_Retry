@@ -11,7 +11,7 @@ namespace VendingMachineKata
         public int InsertedAmount = 0;
 
         /// <summary>
-        /// Determines if inserted coin has any value. 
+        /// Adds a coins value to the inserted amount.
         /// </summary>
         /// <param name="diameter"></param>
         /// <param name="weight"></param>

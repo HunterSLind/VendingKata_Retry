@@ -31,5 +31,10 @@ namespace VendingTests
             Assert.AreEqual(5, thisMachine.InsertedAmount);
         }
 
+        public void DispenseProduct_Yes()
+        {
+            Assert.IsTrue(thisMachine.DispenseProduct(1));
+        }
+
     }
 }
