@@ -7,7 +7,7 @@ namespace VendingTests
     [TestClass]
     public class CoinTests
     {
-        Coin testCoin;
+        Coin testCoinBank;
 
         /// <summary>
         /// Test initialization: Creates a clean Coin Object
@@ -15,7 +15,7 @@ namespace VendingTests
         [TestInitialize]
         public void testInit()
         {
-            testCoin = new Coin();
+            testCoinBank = new Coin();
         }
 
         /// <summary>
@@ -54,6 +54,12 @@ namespace VendingTests
             Assert.AreEqual(25, Coin.CoinValue(Coin.QUARTER.Item1, Coin.QUARTER.Item2));
         }
 
+        public void AddCoin_Nickel()
+        {
+            var originalCount = testCoinBank.Coins[5];
+            testCoinBank.AddCoin(5);
+            Assert.AreEqual(testCoinBank.Coins[5]);
+        }
         
     }
 }
