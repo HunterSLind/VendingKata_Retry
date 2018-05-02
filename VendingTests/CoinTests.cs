@@ -98,5 +98,21 @@ namespace VendingTests
             Assert.AreEqual(expectedResultDictionary[10], actualResultDictionary[10]);
             Assert.AreEqual(expectedResultDictionary[25], actualResultDictionary[25]);
         }
+
+        [TestMethod]
+        public void MakeChange_25()
+        {
+            Dictionary<int, int> expectedResultDictionary = new Dictionary<int, int>()
+            {
+                {5, 0 },
+                {10, 0 },
+                {25, 1 }
+            };
+            Dictionary<int, int> actualResultDictionary = testCoinBank.MakeChange(25);
+
+            Assert.AreEqual(expectedResultDictionary[5], actualResultDictionary[5]);
+            Assert.AreEqual(expectedResultDictionary[10], actualResultDictionary[10]);
+            Assert.AreEqual(expectedResultDictionary[25], actualResultDictionary[25]);
+        }
     }
 }
