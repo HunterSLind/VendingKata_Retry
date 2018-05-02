@@ -92,8 +92,11 @@ namespace VendingTests
                 {10, 0 },
                 {25, 0 }
             };
+            Dictionary<int, int> actualResultDictionary = testCoinBank.MakeChange(0);
 
-            Assert.AreEqual(expectedResultDictionary, testCoinBank.MakeChange(0));
+            Assert.AreEqual(expectedResultDictionary[5], actualResultDictionary[5]);
+            Assert.AreEqual(expectedResultDictionary[10], actualResultDictionary[10]);
+            Assert.AreEqual(expectedResultDictionary[25], actualResultDictionary[25]);
         }
     }
 }
