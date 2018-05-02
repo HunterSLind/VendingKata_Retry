@@ -40,7 +40,7 @@ namespace VendingMachineKata
 
         public int CalculateChange(int productID, int moneyDeposited)
         {
-            return InventoryLevels[productID].Price - moneyDeposited;
+            return moneyDeposited - InventoryLevels[productID].Price;
         }
     }
 }
