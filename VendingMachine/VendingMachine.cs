@@ -72,6 +72,10 @@ namespace VendingMachineKata
             return false;
         }
 
+        /// <summary>
+        /// Returns the current display message
+        /// </summary>
+        /// <returns></returns>
         public string Display()
         {
             return displayMessage;

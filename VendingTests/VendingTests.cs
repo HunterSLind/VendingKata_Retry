@@ -72,6 +72,7 @@ namespace VendingTests
                 thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
                 thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
                 thisMachine.DispenseProduct(ProductInfo.DEFAULTCOLAID);
+                thisMachine.MachineInventory.Withdraw(ProductInfo.DEFAULTCOLAID);
             }
             Assert.AreEqual("SOLD OUT", thisMachine.Display());
         }
@@ -84,6 +85,13 @@ namespace VendingTests
             thisMachine.AcceptCoin(CoinBank.QUARTER.Item1, CoinBank.QUARTER.Item2);
             thisMachine.DispenseProduct(ProductInfo.DEFAULTCANDYID);
             Assert.AreEqual("EXACT CHANGE ONLY", thisMachine.Display());
+        }
+
+        [TestMethod]
+        public void ReturnChange()
+        {
+            thisMachine.ReturnChange();
+            Assert.AreEqual(0, thisMachine.InsertedAmount);
         }
 
     }
