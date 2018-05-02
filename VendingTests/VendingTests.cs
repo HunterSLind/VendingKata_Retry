@@ -59,7 +59,7 @@ namespace VendingTests
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
             thisMachine.DispenseProduct(ProductInfo.COLAID);
-            Assert.AreEqual(thisMachine.Display(), "PRICE: " + ProductInfo.COLAPRICE);
+            Assert.AreEqual("PRICE: " + ProductInfo.COLAPRICE, thisMachine.Display());
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace VendingTests
             {
                 thisMachine.DispenseProduct(ProductInfo.COLAID);
             }
-            Assert.AreEqual(thisMachine.Display(), "SOLD OUT");
+            Assert.AreEqual("SOLD OUT", thisMachine.Display());
         }
 
         [TestMethod]
@@ -79,7 +79,7 @@ namespace VendingTests
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
             thisMachine.AcceptCoin(Coin.QUARTER.Item1, Coin.QUARTER.Item2);
             thisMachine.DispenseProduct(ProductInfo.CANDYID);
-            Assert.AreEqual(thisMachine.Display(), "EXACT CHANGE ONLY");
+            Assert.AreEqual("EXACT CHANGE ONLY", thisMachine.Display());
         }
 
     }
