@@ -65,7 +65,7 @@ namespace VendingTests
         [TestMethod]
         public void CheckIfAbleToMakeChange_NoChange()
         {
-            Assert.IsTrue(testCoinBank.AbleToMakeChange(25));
+            Assert.IsTrue(testCoinBank.AbleToMakeChange(0));
         }
         
         //[TestMethod]
