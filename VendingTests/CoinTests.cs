@@ -71,7 +71,7 @@ namespace VendingTests
         [TestMethod]
         public void AbleToMakeChange_25NoQuarters()
         {
-
+            Assert.IsTrue(testCoinBank.AbleToMakeChange(25));
         }
         
         //[TestMethod]
