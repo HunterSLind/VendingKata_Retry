@@ -8,8 +8,8 @@ namespace VendingMachineKata
 {
     public class Inventory
     {
-
         Tuple<int, int> ColaInventory = new Tuple<int, int>(1, 5);
+        Tuple<int, int> ChipInventory = new Tuple<int, int>(2, 5);
 
 
         public bool IsProductInStock(int productID)
@@ -19,6 +19,10 @@ namespace VendingMachineKata
             {
                 // check cola inventory levels, if there are colas remaining, return true.
                 return (ColaInventory.Item2 > 0);
+            }
+            if (productID == ChipInventory.Item1)
+            {
+                return (ChipInventory.Item2 > 0);
             }
             return false;
         }
