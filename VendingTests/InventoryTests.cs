@@ -7,14 +7,14 @@ namespace VendingTests
     [TestClass]
     public class ProductTests
     {
-        Product thisInventory;
+        Inventory thisInventory;
         /// <summary>
         /// Test initialization: Creates a clean Product Object
         /// </summary>
         [TestInitialize]
         public void testInit()
         {
-            thisInventory = new Product();
+            thisInventory = new Inventory();
         }
 
         [TestMethod]

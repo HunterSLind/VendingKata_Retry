@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace VendingMachineKata
 {
-    public class Product
+    public class Inventory
     {
-        public int selectProduct()
+        public int SelectProduct()
         {
             return 1;
         }
