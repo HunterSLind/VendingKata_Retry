@@ -49,7 +49,7 @@ namespace VendingMachineKata
 
         public void AddCoin(int coinValue)
         {
-
+            Coins[coinValue]++;
         }
     }
 }
