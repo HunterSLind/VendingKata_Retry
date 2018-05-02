@@ -57,7 +57,7 @@ namespace VendingTests
         [TestMethod]
         public void AddCoin_Nickel()
         {
-            var originalCount = testCoinBank.Coins[5];
+            int originalCount = testCoinBank.Coins[5];
             testCoinBank.AddCoin(5);
             Assert.AreEqual(originalCount + 1, testCoinBank.Coins[5]);
         }
