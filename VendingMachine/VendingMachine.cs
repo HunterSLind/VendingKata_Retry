@@ -24,10 +24,6 @@ namespace VendingMachineKata
             }
             // if coin is not accepted, don't add to amount
         }
-
-        public int SelectProduct()
-        {
-            return 0;
-        }
+        
     }
 }
