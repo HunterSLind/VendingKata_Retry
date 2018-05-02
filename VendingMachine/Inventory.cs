@@ -19,6 +19,10 @@ namespace VendingMachineKata
             {CandyInventory.Item1, CandyInventory.Item2 }
         };
 
+        public Inventory(Dictionary<int, int> inventoryDictionary)
+        {
+            InventoryLevels = inventoryDictionary;
+        }
 
         public bool IsProductInStock(int productID)
         {
