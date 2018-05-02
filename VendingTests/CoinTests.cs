@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendingMachineKata;
 
@@ -81,10 +82,18 @@ namespace VendingTests
             testCoinBank = new Coin(4);
             Assert.IsTrue(testCoinBank.AbleToMakeChange(25));
         }
-        //[TestMethod]
-        //public void MakeChange_NoChange()
-        //{
-            
-        //}
+
+        [TestMethod]
+        public void MakeChange_NoChange()
+        {
+            Dictionary<int, int> expectedResultDictionary = new Dictionary<int, int>()
+            {
+                {5, 0 },
+                {10, 0 },
+                {25, 0 }
+            };
+
+            Assert.AreEqual(expectedResultDictionary, testCoinBank.MakeChange(0));
+        }
     }
 }
