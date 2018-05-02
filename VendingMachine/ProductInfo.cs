@@ -23,7 +23,7 @@ namespace VendingMachineKata
         public int Price { get; set; }
         public int Stock { get; set; }
 
-        public ProductInfo(int price, int stock)
+        public ProductInfo(int stock, int price)
         {
             Price = price;
             Stock = stock;

@@ -49,7 +49,7 @@ namespace VendingTests
         [TestMethod]
         public void IsEnoughMoneyForProduct()
         {
-            Assert.IsTrue(thisInventory.IsEnoughMoneyForProduct(ProductInfo.COLAID, 200));
+            Assert.IsTrue(thisInventory.IsEnoughMoneyForProduct(ProductInfo.COLAID, ProductInfo.COLAPRICE));
         }
     }
 }
