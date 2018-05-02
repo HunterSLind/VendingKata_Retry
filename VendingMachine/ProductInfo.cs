@@ -12,6 +12,14 @@ namespace VendingMachineKata
         public static int CHIPID = 2;
         public static int CANDYID = 3;
 
+        public static int COLASTOCK = 5;
+        public static int CHIPSTOCK = 5;
+        public static int CANDYSTOCK = 5;
+
+        public static int COLAPRICE = 100;
+        public static int CHIPPRICE = 50;
+        public static int CANDYPRICE = 65;
+
         public int Price { get; set; }
         public int Stock { get; set; }
 
