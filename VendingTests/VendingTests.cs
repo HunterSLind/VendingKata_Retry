@@ -65,7 +65,7 @@ namespace VendingTests
         [TestMethod]
         public void DispenseProduct_No_OutOfStock()
         {
-            for(int i = 0; i <= ProductInfo.COLASTOCK; i++)
+            for (int i = 0; i <= ProductInfo.COLASTOCK; i++)
             {
                 thisMachine.DispenseProduct(ProductInfo.COLAID);
             }
@@ -75,10 +75,7 @@ namespace VendingTests
         [TestMethod]
         public void DispenseProduct_No_ExactChangeOnly()
         {
-            for (int i = 0; i <= ProductInfo.COLASTOCK; i++)
-            {
-                thisMachine.DispenseProduct(ProductInfo.COLAID);
-            }
+            thisMachine.DispenseProduct(ProductInfo.COLAID);
             Assert.AreEqual(thisMachine.Display(), "EXACT CHANGE ONLY");
         }
 
