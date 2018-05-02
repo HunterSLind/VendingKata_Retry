@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace VendingMachineKata
 {
-    class Product
+    public class Product
     {
+        public int selectProduct()
+        {
+            return 1;
+        }
     }
 }
