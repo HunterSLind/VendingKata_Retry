@@ -92,6 +92,7 @@ namespace VendingMachineKata
                 {10, 0 },
                 {25, 0 }
             };
+
             return changeDictionary;
         }
     }
