@@ -54,11 +54,12 @@ namespace VendingTests
             Assert.AreEqual(25, Coin.CoinValue(Coin.QUARTER.Item1, Coin.QUARTER.Item2));
         }
 
+        [TestMethod]
         public void AddCoin_Nickel()
         {
             var originalCount = testCoinBank.Coins[5];
             testCoinBank.AddCoin(5);
-            Assert.AreEqual(testCoinBank.Coins[5]);
+            Assert.AreEqual(originalCount + 1, testCoinBank.Coins[5]);
         }
         
     }

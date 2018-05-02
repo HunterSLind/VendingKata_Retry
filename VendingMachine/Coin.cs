@@ -16,12 +16,26 @@ namespace VendingMachineKata
         public static readonly Tuple<double, double> DIME = new Tuple<double, double>(17.9, 2.3);
         public static readonly Tuple<double, double> QUARTER = new Tuple<double, double>(24.3, 5.7);
 
+       
+
         private static readonly Dictionary<Tuple<double, double>, int> VALIDCOINDICTIONARY = new Dictionary<Tuple<double, double>, int>()
         {
             {NICKEL, 5 },
             {DIME, 10},
             {QUARTER, 25 }
         };
+
+
+        /// <summary>
+        /// Contains a dictionary of currently deposited coins and their values. 
+        /// </summary>
+        public Dictionary<int, int> Coins = new Dictionary<int, int>()
+        {
+            {5, 0 },
+            {10, 0 },
+            {25, 0 }
+        };
+
 
         public static int CoinValue(double diameter, double weight)
         {
@@ -31,6 +45,11 @@ namespace VendingMachineKata
                 return VALIDCOINDICTIONARY[coinTuple];
             }
             return 0;
+        }
+
+        public void AddCoin(int coinValue)
+        {
+
         }
     }
 }
