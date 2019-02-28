@@ -8,7 +8,7 @@ namespace VendingMachineKata
 {
     public class VendingMachine
     {
-		public int change;
+		public int change = 0;
         public int InsertedAmount = 0;
         public CoinBank MachineBank;
         public Inventory MachineInventory;
